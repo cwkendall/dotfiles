@@ -1,0 +1,133 @@
+# Optional tools are kept separate so the base bootstrap stays small.
+# Review this file first: running it installs every entry below.
+#
+#     brew bundle --file Brewfile.optional
+
+# ShellCheck catches common correctness and portability bugs in shell scripts.
+brew "shellcheck"
+
+# shfmt applies consistent formatting to shell scripts.
+brew "shfmt"
+
+# xh is a friendly, fast HTTP client for testing APIs from the terminal.
+brew "xh"
+
+# mkcert creates locally trusted development certificates for HTTPS testing.
+brew "mkcert"
+
+# Gitleaks scans repositories and commits for accidentally exposed secrets.
+brew "gitleaks"
+
+# prek is a fast Rust implementation of the pre-commit hook framework.
+brew "prek"
+
+# actionlint catches errors in GitHub Actions workflows before they are pushed.
+brew "actionlint"
+
+# terraform-docs generates accurate input and output documentation from IaC modules.
+brew "terraform-docs"
+
+# Colima runs Linux containers in a lightweight macOS virtual machine.
+brew "colima"
+
+# Docker supplies the container CLI without installing Docker Desktop.
+brew "docker"
+
+# Buildx adds BuildKit-based multi-platform image builds to the Docker CLI.
+brew "docker-buildx"
+
+# Docker Compose defines and runs local multi-container development stacks.
+brew "docker-compose"
+
+# AWS CLI provides direct access to AWS services, including Amazon Connect APIs.
+brew "awscli"
+
+# OpenTofu is the open-source Terraform-compatible infrastructure-as-code CLI.
+brew "opentofu"
+
+# DuckDB queries local CSV, JSON and Parquet data with SQL.
+brew "duckdb"
+
+# xan is a fast Rust toolkit for inspecting and transforming CSV data.
+brew "xan"
+
+# Snowflake CLI is installed in an isolated uv environment and exposes `snow`.
+uv "snowflake-cli"
+
+# hf is the official Hugging Face search, Collections, download and cache CLI.
+brew "hf"
+
+# llmfit detects this Mac's hardware and ranks local models likely to fit.
+brew "llmfit"
+
+# macmon monitors Apple Silicon CPU, GPU, memory and power without root access.
+brew "macmon"
+
+# mlx-lm is Apple's lightweight text-generation and fine-tuning CLI for MLX models.
+brew "mlx-lm"
+
+# The remaining tools are deliberately commented out. Uncomment only the tools
+# you want, then rerun this bundle; no model weights are downloaded by Brew.
+
+# mlx-vlm runs vision, audio and omni models such as the multimodal Gemma 4 family.
+# uv "mlx-vlm"
+
+# LLM is Simon Willison's pipe-friendly CLI with templates, aliases and SQLite logs.
+# Install its MLX text-model plugin afterwards with: llm install llm-mlx
+# brew "llm"
+
+# oMLX's official tap supplies a warm, OpenAI-compatible multi-model MLX server.
+# tap "jundot/omlx", "https://github.com/jundot/omlx"
+
+# oMLX adds model browsing, on-demand loading, batching and reusable KV caches.
+# It is installed stopped; start it manually only when repeated local calls need it.
+# brew "jundot/omlx/omlx"
+
+# LM Studio is a polished desktop model browser and MLX/GGUF inference server.
+# It overlaps oMLX, so install one only after choosing the preferred workflow.
+# cask "lm-studio"
+
+# models compares AI models, providers, benchmarks and coding agents in a Rust TUI.
+# brew "models"
+
+# aichat is a Rust AI chat and shell-copilot CLI; it overlaps OpenCode and LLM.
+# brew "aichat"
+
+# Atuin provides searchable shell history with optional encrypted synchronisation.
+# Leave it off until its history privacy and sync behaviour have been reviewed.
+# brew "atuin"
+
+# Yazi is a fast asynchronous terminal file manager with rich previews.
+# brew "yazi"
+
+# dua-cli finds large directories and can interactively reclaim disk space.
+# brew "dua-cli"
+
+# Difftastic compares source code structurally; Delta already handles normal diffs.
+# brew "difftastic"
+
+# watchexec reruns commands when files change; many project tools have native watch modes.
+# brew "watchexec"
+
+# jnv provides an interactive interface for developing jq filters.
+# brew "jnv"
+
+# Trippy combines traceroute and ping in a network-diagnostics TUI.
+# brew "trippy"
+
+# Hurl stores repeatable HTTP requests and assertions in plain-text files.
+# brew "hurl"
+
+# AWS Vault stores long-lived AWS credentials in macOS Keychain and issues sessions.
+# Prefer this when access keys are unavoidable; do not install alongside Granted by default.
+# brew "aws-vault"
+
+# Granted streamlines AWS IAM Identity Center/SSO account and role switching.
+# Prefer this for an SSO-first AWS setup; do not install alongside AWS Vault by default.
+# brew "granted"
+
+# Brave provides Chromium DevTools with built-in ad and tracker blocking.
+cask "brave-browser"
+
+# OpenSuperWhisper provides local macOS speech-to-text and private dictation.
+cask "opensuperwhisper"

@@ -1,0 +1,9 @@
+# Ghostty terminal configuration
+# https://ghostty.org/docs/config
+
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+window-save-state = always
+copy-on-select = clipboard
+shell-integration = detect

@@ -1,0 +1,71 @@
+# Optional public Agent Skills installed globally for OpenCode by install.sh.
+# Format: <owner>/<repository> <skill-name> [<skill-name> ...]
+# Uncomment only the sources and skills you want, then rerun install.sh.
+
+# Matt Pocock's maintained engineering workflows. Skills load on demand, so
+# this gives broad coverage without injecting every workflow into every prompt.
+# mattpocock/skills diagnosing-bugs tdd code-review grilling grill-with-docs domain-modeling codebase-design research prototype resolving-merge-conflicts to-spec to-tickets handoff improve-codebase-architecture triage writing-great-skills
+
+# Evidence-first verification before an agent claims that work is complete.
+# obra/superpowers verification-before-completion
+
+# This repository's focused macOS package, dotfiles and backup stewardship.
+# cwkendall/dotfiles managing-macos-workstation
+
+# Small general coding discipline based on Andrej Karpathy's LLM guidelines.
+# forrestchang/andrej-karpathy-skills karpathy-guidelines
+
+# OpenAI's focused secure-coding review guidance. The standalone openai/skills
+# catalogue is deprecated in favour of Codex plugins, but this Apache-2.0 skill
+# remains portable and does not require Codex-specific tools.
+# openai/skills security-best-practices
+
+# Frontend art direction that avoids generic AI layouts and establishes a
+# compact colour, typography, layout and motion system before implementation.
+# anthropics/skills frontend-design
+
+# Searchable UI/UX design intelligence for choosing coherent palettes, type,
+# spacing, components, accessibility rules and framework-specific patterns.
+# nextlevelbuilder/ui-ux-pro-max-skill ui-ux-pro-max design-system
+
+# Vercel's framework-neutral review rules for responsive, accessible and
+# maintainable web interfaces after the initial visual direction is established.
+# vercel-labs/agent-skills web-design-guidelines
+
+# Extract reusable tokens and design rules from an existing interface or
+# reference before recording the result in the project's DESIGN.md.
+# arvindrk/extract-design-system extract-design-system
+
+# Use and customise shadcn/ui as an open-code component foundation rather than
+# generating unrelated one-off components for React projects.
+# shadcn/ui shadcn
+
+# Distinctive high-variance visual direction for marketing sites and
+# portfolios; enable per project rather than treating its taste as universal.
+# leonxlnx/taste-skill design-taste-frontend
+
+# Motion and interaction judgement: easing, duration, springs, interruption
+# and restraint for interfaces that should feel polished rather than busy.
+# emilkowalski/skills emil-design-eng
+
+# Iterative UI critique, accessibility checks and production polish. Review its
+# hooks and scripts before installation because it is more than a prompt file.
+# pbakaus/impeccable impeccable
+
+# Focused Three.js references for scenes, model loading, animation, shaders,
+# post-processing and interaction. These do not provide scroll choreography.
+# CloudAI-X/threejs-skills threejs-fundamentals threejs-loaders threejs-animation threejs-shaders threejs-postprocessing threejs-interaction
+
+# GSAP ScrollTrigger and Three.js implementation guidance, including canvas
+# image-sequence scrubbing. Verify examples against current upstream APIs.
+# freshtechbro/claudedesignskills gsap-scrolltrigger threejs-webgl
+
+# Experimental continuous AI-generated world/video scrubbed by page scroll.
+# Requires external generation services plus FFmpeg; enable only for that effect.
+# oso95/scroll-world scroll-world
+
+# Repository-grounded application threat modelling for exposed systems.
+# openai/skills security-threat-model
+
+# Anthropic's MCP server design and evaluation workflow for regular MCP work.
+# anthropics/skills mcp-builder

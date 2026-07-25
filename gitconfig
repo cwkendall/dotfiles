@@ -1,0 +1,50 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = delta
+
+[credential]
+	helper = osxkeychain
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+	ff = only
+
+[fetch]
+	prune = true
+
+[diff]
+	algorithm = histogram
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+
+[merge]
+	conflictStyle = zdiff3
+
+[rerere]
+	enabled = true
+
+[rebase]
+	autoStash = true
+
+[alias]
+	st = status --short --branch
+	co = checkout
+	br = branch
+	sw = switch
+	last = log -1 HEAD --stat
+	lg = log --graph --decorate --oneline --all
+	unstage = restore --staged --
+
+[include]
+	path = ~/.gitconfig.local

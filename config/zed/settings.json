@@ -1,0 +1,20 @@
+{
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14,
+  "format_on_save": "on",
+  "load_direnv": "shell_hook",
+  "auto_install_extensions": {
+    "terraform": true,
+    "github-actions": true,
+    "dockerfile": true
+  },
+  "terminal": {
+    "shell": "system"
+  }
+}

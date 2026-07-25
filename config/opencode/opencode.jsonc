@@ -1,0 +1,107 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Optional context protection. Uncomment only if long sessions regularly
+  // ingest large logs, API responses or browser output. OpenCode installs the
+  // package when this entry is active.
+  // "plugin": ["context-mode"],
+
+  "autoupdate": false,
+  "share": "disabled",
+  "default_agent": "build",
+  "model": "opencode-go/deepseek-v4-pro",
+  "small_model": "opencode-go/deepseek-v4-flash",
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**"
+    ]
+  },
+  "permission": {
+    "external_directory": "ask",
+    "bash": {
+      "*": "allow",
+      "brew install *": "ask",
+      "brew services *": "ask",
+      "brew uninstall *": "ask",
+      "brew upgrade *": "ask",
+      "chmod *": "ask",
+      "chown *": "ask",
+      "dd *": "ask",
+      "diskutil *": "ask",
+      "docker system prune*": "ask",
+      "git clean *": "ask",
+      "git checkout *": "ask",
+      "git push *": "ask",
+      "git rebase *": "ask",
+      "git reset --hard *": "ask",
+      "git restore *": "ask",
+      "mv *": "ask",
+      "rm *": "ask",
+      "sudo *": "ask",
+      "tofu apply*": "ask",
+      "tofu destroy*": "ask"
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "bun",
+        "x",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": false
+    },
+    "agentmemory": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "@agentmemory/mcp"
+      ],
+      "enabled": false
+    }
+  },
+  "agent": {
+    "build": {
+      "model": "opencode-go/deepseek-v4-pro"
+    },
+    "plan": {
+      "model": "opencode-go/glm-5.2"
+    },
+    "general": {
+      "model": "opencode-go/deepseek-v4-pro"
+    },
+    "explore": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "scout": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "review": {
+      "description": "Review current changes for correctness, regressions, security risks and missing tests",
+      "mode": "subagent",
+      "model": "opencode-go/glm-5.2",
+      "prompt": "Review the requested change against its intended behaviour. Inspect the diff first. Report only actionable findings with evidence, ordered by severity. Do not modify files.",
+      "permission": {
+        "edit": "deny",
+        "bash": {
+          "*": "ask",
+          "fd *": "allow",
+          "git diff*": "allow",
+          "git log*": "allow",
+          "git show*": "allow",
+          "git status*": "allow",
+          "rg *": "allow"
+        }
+      }
+    }
+  }
+}
