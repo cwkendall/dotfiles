@@ -32,7 +32,7 @@ brew "fzf"
 brew "uv"
 
 # Bun is the preferred JavaScript/TypeScript runtime, package manager and test runner.
-brew "oven-sh/bun/bun"
+brew "oven-sh/bun/bun", trusted: true
 
 # Starship provides a fast, cross-shell prompt without requiring a zsh framework.
 brew "starship"
@@ -59,7 +59,7 @@ brew "direnv"
 brew "just"
 
 # OpenCode is the default open-source, multi-provider terminal coding agent.
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode", trusted: true
 
 # Ghostty is a fast native terminal with deliberately minimal tracked configuration.
 cask "ghostty"

@@ -81,7 +81,7 @@ brew "mlx-lm"
 
 # oMLX adds model browsing, on-demand loading, batching and reusable KV caches.
 # It is installed stopped; start it manually only when repeated local calls need it.
-# brew "jundot/omlx/omlx"
+# brew "jundot/omlx/omlx", trusted: true
 
 # LM Studio is a polished desktop model browser and MLX/GGUF inference server.
 # It overlaps oMLX, so install one only after choosing the preferred workflow.
